@@ -1,0 +1,14 @@
+digraph G1 {
+  concentrate = true;
+  n2 [label="FingerprintUiHelper$FingerprintUiHelperBuilder"];
+  FingerprintAuthenticationDialogFragment -> n2;
+  FingerprintAuthenticationDialogFragment -> SharedPreferences;
+  FingerprintAuthenticationDialogFragment -> InputMethodManager;
+  FingerprintManagerCompat -> Context;
+  n2 -> FingerprintManagerCompat;
+  InputMethodManager -> Context;
+  MainActivity -> FingerprintAuthenticationDialogFragment;
+  MainActivity -> SharedPreferences;
+  MainActivity -> FingerprintManagerCompat;
+  SharedPreferences -> Context;
+}
